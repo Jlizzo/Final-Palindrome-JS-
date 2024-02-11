@@ -1,0 +1,25 @@
+
+function myFunction1() {
+    
+    const eventChecker = document.getElementById('b1');
+    eventChecker.addEventListener('click', myFunction1);
+    alert ("Pal-in-drome: a word, phrase, or sequence that reads the same backward as forward, e.g., 'madam', '3_49*94_3' or 'nurses run'");
+}
+
+function validatePal() {
+
+    const str = document.getElementById('name').value.toLowerCase();
+    let i = 0;
+    let j = str.length - 1;
+
+    while(i < j) {
+        if(str[i] == str[j]) {
+            i++; 
+            j--;
+            return alert("This is a palindrome!");
+        }else {
+            return alert("Nope! Not a palindrome. Try again.");
+        }
+    }
+}
+        
